@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 25px;
+  width: 100%;
+}
+
+.thumb {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  height: 100px;
+  margin: 5px;
+  padding-top: calc(50px - 1em);
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  width: 150px;
+
+  .recipe-type {
+    font-size: 0.8em;
+  }
+
+  &:hover,
+  &.selected {
+    border-color: #337ab7;
+  }
+
+  &.selected {
+    background-color: #337ab7;
+    color: #fff;
+  }
+}
