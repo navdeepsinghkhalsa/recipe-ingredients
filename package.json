@@ -4,9 +4,11 @@
   "description": "Display ingredients needed for single or multiple dishes",
   "main": "server.js",
   "scripts": {
-    "compile": "webpack",
-    "start": "node server.js",
+    "compile": "webpack && npm run build-css",
+    "start": "concurrently --kill-others \"nodemon --watch server.js\" \"npm run watch-css\"",
     "test": "eslint . && stylelint \"src/scss/*.scss\" --syntax scss",
+    "build-css": "node-sass-chokidar src/scss/ -o www/css/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/scss/ -o www/css/ --watch --recursive"
   },
   "repository": {
     "type": "git",
@@ -30,6 +32,7 @@
     "webpack-dev-middleware": "^1.11.0"
   },
   "devDependencies": {
+    "concurrently": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-airbnb-base": "^11.2.0",
