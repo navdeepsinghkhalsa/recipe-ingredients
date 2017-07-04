@@ -2,6 +2,7 @@ import Promise from 'promise-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Thumbnails from './thumbnails';
+import Ingredients from './ingredients';
 
 function status(response) {
   if (response.status >= 200 && response.status < 300) {
@@ -57,6 +58,11 @@ class Recipes extends React.Component {
           recipes={this.state.recipes}
           selectedRecipes={this.state.selectedRecipes}
           onClick={(e, i) => this.handleThumbClick(e, i)}
+        />
+
+        <Ingredients
+          recipes={this.state.recipes}
+          selectedRecipes={this.state.selectedRecipes}
         />
       </div>
     );

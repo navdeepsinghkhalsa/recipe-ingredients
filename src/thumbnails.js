@@ -29,6 +29,7 @@ class Thumbnails extends React.Component {
 
     return (
       <div id="thumbnails">
+        <h2>Recipes</h2>
         {thumbs}
       </div>
     );
