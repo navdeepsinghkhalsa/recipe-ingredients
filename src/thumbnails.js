@@ -2,6 +2,7 @@ import React from 'react';
 
 function Thumb(props) {
   return (
+    // Add a 'selected' class to those that are in the selectedRecipes array
     <a className={`thumb ${props.selectedRecipes.indexOf(props.recipeKey) > -1 ? 'selected' : ''}`} onClick={props.onClick}>
       <div className="recipe-name">{props.recipe.name}</div>
       <div className="recipe-type">{props.recipe.type}</div>

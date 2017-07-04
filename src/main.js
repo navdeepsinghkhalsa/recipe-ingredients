@@ -4,6 +4,11 @@ import ReactDOM from 'react-dom';
 import Thumbnails from './thumbnails';
 import Ingredients from './ingredients';
 
+/**
+ * Check if fetch response status is successful
+ *
+ * @param {object} response Fetch API response
+ */
 function status(response) {
   if (response.status >= 200 && response.status < 300) {
     return Promise.resolve(response);
@@ -14,6 +19,8 @@ function status(response) {
 class Recipes extends React.Component {
   constructor() {
     super();
+
+    // Add initial states
     this.state = {
       recipes: [],
       selectedRecipes: [],
@@ -36,6 +43,7 @@ class Recipes extends React.Component {
     const multiple = e[`${mod}Key`];
     let selectedRecipes = this.state.selectedRecipes;
 
+    // If Cmd/Ctrl was pressed during click, toggle the recipe
     if (multiple) {
       const index = selectedRecipes.indexOf(i);
       if (index === -1) {
@@ -43,6 +51,7 @@ class Recipes extends React.Component {
       } else {
         selectedRecipes.splice(index, 1);
       }
+    // Otherwise replace the selectedRecipes array with just the one clicked
     } else {
       selectedRecipes = [i];
     }

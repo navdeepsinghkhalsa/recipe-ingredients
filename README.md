@@ -1,21 +1,12 @@
-<h1>PayByPhone's Frontend Code Test</h1>
-<p>This is an at-home exercise that we use as part of our standard interview process for frontend and full-stack developers.</p>
+# Recipe Ingredents
+>This is a simple React app that displays ingredients for recipes selected from a list.
 
-<h2>Instructions</h2>
+Multiple recipes may be selected by holding Cmd/Ctrl when clicking on thumbnails.
 
-<ul>
-    <li>Clone this repo</li>
-    <li>Complete the exercise and submit either a zip of the solution or a link to a new repo</li>
-    <li>You may use any resources, frameworks, libraries, etc and style the markup however you like.</li>
-</ul>
+Recipes ingredients are displayed in alphabetical order, with duplicates removed in the case of multiple recipes selected.
 
-<h2>Requirements</h2>
+## Instructions
 
-<p>Using the provided JSON data representing a collection of meal recipes, create a micro frontend application that meets the following criteria:</p>
-
-<ul>
-    <li>Display a list (or table) of recipes from the provided JSON.</li>
-    <li>Allow selection of multiple recipes.</li>
-    <li>Show an alphabetically ordered list of distinct ingredients for the selected recipes. This should update as recipes are selected / unselected.</li>
-    <li>In a README note any required setup to be able to run the app, such as modifying hosts file, npm install, etc.</li>
-</ul>
+ - Clone this repo
+ - Run `npm install`
+ - Run `npm start` and open browser window at http://localhost:3000
